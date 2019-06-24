@@ -1,7 +1,7 @@
 {
-  "name": "angular-7-webpack-4-boilerplate",
+  "name": "model-viewer-demo",
   "version": "1.0.0",
-  "description": "Angular 7 application with webpack 4 boilerplate",
+  "description": "model-viewer-demo",
   "scripts": {
     "ngc": "ngc",
     "webpack-dev": "cross-env NODE_ENV=development webpack --mode development",
@@ -12,11 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/samteb/Angular-7-Webpack-4.git"
+    "url": "https://github.com/mia-nygren/model-viewer-demo.git"
   },
-  "author": "samteb <sam.teboul@gmail.com>",
+  "author": "mia-nygren <marianygren88@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/samteb/Angular-7-Webpack-4",
+  "homepage": "https://github.com/mia-nygren/model-viewer-demo",
   "dependencies": {
     "@angular/animations": "~7.2",
     "@angular/common": "~7.2",

@@ -5,6 +5,7 @@ const ngw = require('@ngtools/webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
+const CopyPlugin           = require('copy-webpack-plugin');
 
 const commonConfig = require('./webpack.config.common');
 
@@ -17,8 +18,8 @@ module.exports = webpackMerge(commonConfig, {
     mode: 'production',
 
     output: {
-        path: helpers.root('docs'),
-        publicPath: '/angular7-sass-webpack4/',
+        path: helpers.root('dist'),
+        publicPath: '/dist/',
         filename: 'js/[hash].js',
         chunkFilename: 'js/[id].[hash].chunk.js'
     },
@@ -62,6 +63,12 @@ module.exports = webpackMerge(commonConfig, {
         new FileManagerPlugin({
             onStart: filemanager.onStart,
             onEnd: filemanager.onEnd
-        })
+        }),
+        new CopyPlugin([
+            {
+              from: 'node_modules/@webcomponents/webcomponentsjs/**/*js',
+              to: 'polyfill/webcomponents/',
+            },
+          ]),
     ]
 });

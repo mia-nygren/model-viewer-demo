@@ -27,6 +27,17 @@ module.exports = {
                 exclude: [helpers.root('src/index.html')]
             },
             {
+                test: /\.(png|jpe?g|gif|glb|gltf|bin)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]',
+                      },
+                  },
+                ],
+              },
+            {
                 test: /\.(scss|sass)$/,
                 use: [
                      isDev ? 'style-loader': MiniCssExtractPlugin.loader,
@@ -49,7 +60,7 @@ module.exports = {
 
     plugins: [
         new CleanWebpackPlugin(
-            helpers.root('docs'), { root: helpers.root(), verbose: true }),
+            helpers.root('dist'), { root: helpers.root(), verbose: true }),
 
         new HtmlWebpackPlugin({
             template: 'src/index.html',

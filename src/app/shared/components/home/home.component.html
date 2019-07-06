@@ -1,1 +1,12 @@
-<h1>Home Page</h1>
+    <div class="grid">
+        <div class="infoSofa">
+          
+        </div>
+        <div class="sofaWrapper">
+            <model-viewer #mv [src]="sofaUrl" camera-controls auto-rotate background-color="#4a4a4a"></model-viewer>
+        </div>
+        <div class="standWrapper">
+        <model-viewer #mv [src]="nightstandUrl" camera-controls></model-viewer>
+        </div>
+    </div>
+    

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    name = 'Angular 7 & Webpack 4';
+    name = '3D model-viewer Demo';
+    // models = modelsArr
 }

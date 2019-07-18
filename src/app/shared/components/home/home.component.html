@@ -1,12 +1,14 @@
-    <div class="grid">
-        <div class="infoSofa">
-          
-        </div>
-        <div class="sofaWrapper">
-            <model-viewer #mv [src]="sofaUrl" camera-controls auto-rotate background-color="#4a4a4a"></model-viewer>
-        </div>
-        <div class="standWrapper">
-        <model-viewer #mv [src]="nightstandUrl" camera-controls></model-viewer>
-        </div>
-    </div>
-    
+<div class="sofaImageWrapper">
+<img class="imageFit" [src]="sofaImage" />
+</div>
+<div class="sofaWrapper">
+    <model-viewer [src]="sofaUrl" camera-controls auto-rotate background-color="#333333"  stage-light-intensity="0.5"></model-viewer>
+</div>
+
+<div class="nightstandWrapper">
+    <model-viewer #nightstand [src]="nightstandUrl" camera-controls background-color="#333333"></model-viewer>
+</div>
+<img class="ukeImage imageFit" [src]="ukeImage" />
+<div class="ukuleleWrapper">
+    <model-viewer [src]="ukeUrl" camera-controls background-color="#333333" stage-light-intensity="0.8" ></model-viewer>
+</div>

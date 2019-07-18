@@ -2,7 +2,9 @@
 
 const webpackMerge = require('webpack-merge');
 const ngw = require('@ngtools/webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin    = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
 const CopyPlugin           = require('copy-webpack-plugin');
@@ -19,7 +21,7 @@ module.exports = webpackMerge(commonConfig, {
 
     output: {
         path: helpers.root('dist'),
-        publicPath: '/dist/',
+        publicPath: 'https://mia-nygren.github.io/model-viewer-demo/',
         filename: 'js/[hash].js',
         chunkFilename: 'js/[id].[hash].chunk.js'
     },
@@ -31,10 +33,14 @@ module.exports = webpackMerge(commonConfig, {
         },
         runtimeChunk: 'single',
         minimizer: [
-            new UglifyJsPlugin({
+            new TerserPlugin({
                 cache: true,
-                parallel: true
-            }),
+                parallel: true,
+                sourceMap: true, // Must be set to true if using source-maps in production
+                terserOptions: {
+                  // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
+                }
+              }),
 
             new OptimizeCSSAssetsPlugin({
                 cssProcessor: cssnano,
@@ -63,6 +69,10 @@ module.exports = webpackMerge(commonConfig, {
         new FileManagerPlugin({
             onStart: filemanager.onStart,
             onEnd: filemanager.onEnd
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/index.html',
+            baseUrl: 'https://mia-nygren.github.io/model-viewer-demo/',
         }),
         new CopyPlugin([
             {

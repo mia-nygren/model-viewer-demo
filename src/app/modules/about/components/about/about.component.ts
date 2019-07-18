@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as uvExample from '../../../../../assets/images/uvExample.jpg';
 
 @Component({
     selector: 'about-page',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
     host: {'class': 'mainContent'}
 })
 
-export class AboutComponent {}
+export class AboutComponent {
+  uvExampleSrc:string = uvExample;
+
+}

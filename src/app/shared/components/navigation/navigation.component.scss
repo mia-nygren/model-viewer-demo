@@ -1,7 +1,29 @@
+$border: 5px solid #212121;
 
-// div {
-//   h1 {
-//     color: green;
-//   }
-// }
+.navigation:host {
+    z-index:999;
+    width:100vw;
+    .navbar {
+      width:100vw;
+      height:60px;
+      background: #333;
+      border-bottom: $border;
+      padding-left:30px;
+    }
+    .navbar-item {
+     font-size:1.2em;
+     padding:15px;
+     color:#CCCCCC !important;
+     text-decoration:none;
+     line-height:60px;
+    }
+    .navbar-item:hover {
 
+      color:#fafafa !important;
+    }
+  
+    .navbar-item:focus {
+
+      color:#fafafa !important;
+    }
+  }

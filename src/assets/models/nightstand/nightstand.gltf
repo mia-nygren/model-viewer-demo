@@ -1,0 +1,173 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v0.9.36",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cube.030",
+            "scale" : [
+                0.8245696425437927,
+                0.8209150433540344,
+                0.8245695233345032
+            ],
+            "translation" : [
+                -5.0374274253845215,
+                0.18731069564819336,
+                0.0001088753342628479
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "BAKED",
+            "normalTexture" : {
+                "index" : 0,
+                "scale" : 0.9,
+                "texCoord" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1,
+                    "texCoord" : 0
+                },
+                "metallicFactor" : 0,
+                "metallicRoughnessTexture" : {
+                    "index" : 2,
+                    "texCoord" : 0
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.018",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2,
+                        "TEXCOORD_1" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "source" : 0
+        },
+        {
+            "source" : 1
+        },
+        {
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "NIGHTSTAND_NRM",
+            "uri" : "NIGHTSTAND_NRM.png"
+        },
+        {
+            "mimeType" : "image/jpg",
+            "name" : "NIGHSTAND_DIFF",
+            "uri" : "NIGHSTAND_DIFF.jpg"
+        },
+        {
+            "mimeType" : "image/jpg",
+            "name" : "NIGHTSTAND_ROUGH",
+            "uri" : "NIGHTSTAND_ROUGH.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 6845,
+            "max" : [
+                0.3653912842273712,
+                0.1778920441865921,
+                0.29129424691200256
+            ],
+            "min" : [
+                -0.3653893768787384,
+                -0.6615307927131653,
+                -0.2832539677619934
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 6845,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 6845,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 6845,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 13392,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 82140,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 82140,
+            "byteOffset" : 82140
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 54760,
+            "byteOffset" : 164280
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 54760,
+            "byteOffset" : 219040
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 26784,
+            "byteOffset" : 273800
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 300584,
+            "uri" : "nightstand.bin"
+        }
+    ]
+}

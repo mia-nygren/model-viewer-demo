@@ -12,7 +12,6 @@ module.exports = {
         vendor: './src/vendor.ts',
         polyfills: './src/polyfills.ts',
         main: isDev ? './src/main.ts' : './src/main.aot.ts',
-        light_theme: './src/assets/include.scss'
     },
 
     resolve: {
@@ -65,7 +64,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html',
             baseUrl: '/',
-            excludeChunks: ['light_theme']
         }),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output

@@ -5,6 +5,7 @@
 html, body {
   height:100%  !important;
   font-family:  "Nunito", sans-serif;
+  background:#333;
 }
 model-viewer {
   height:100%;  
@@ -13,6 +14,10 @@ model-viewer {
 
 .mainContent {
   padding:20px;
+  background:#fff !important;
+  height:100%;
+  width:100%;
+  display:block;
 }
 
 

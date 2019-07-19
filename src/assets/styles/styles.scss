@@ -6,10 +6,7 @@ html, body {
   height:100%  !important;
   font-family:  "Nunito", sans-serif;
   background:#333;
-}
-model-viewer {
-  height:100%;  
-  width:100%;
+  overflow-x:hidden;
 }
 
 .mainContent {
@@ -20,13 +17,10 @@ model-viewer {
   display:block;
 }
 
+// model-viewer web component
 
-
-// .grid {
-//   display:grid;
-//   height:100vh;
-//   width:100vw;
-//   grid-template-columns: repeat(12, 8%);
-//   grid-template-rows: repeat(12, 8%);
-// }
+model-viewer {
+  height:100% !important;  
+  width:100%;
+}
 

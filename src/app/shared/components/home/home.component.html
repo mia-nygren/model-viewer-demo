@@ -1,14 +1,22 @@
 <div class="sofaImageWrapper">
-<img class="imageFit" [src]="sofaImage" />
+    <img class="imageFit" [src]="sofaImage" />
 </div>
 <div class="sofaWrapper">
-    <model-viewer [src]="sofaUrl" camera-controls auto-rotate background-color="#333333"  stage-light-intensity="0.5"></model-viewer>
+    <model-viewer id="lazy-load " camera-controls auto-rotate reveal="interaction" [src]="sofaUrl" alt="A 3D model of a sofa" background-color="#333333"  stage-light-intensity="0.5">
+    <div id="lazy-load-poster"  class="sofaModel"  slot="poster"></div>
+    <div id="button-load" slot="poster" (click)="loadSofa()"> {{loadingSofa ? 'Loading...' : 'Load 3D Model'}}</div>
+   </model-viewer>
 </div>
 
 <div class="nightstandWrapper">
-    <model-viewer #nightstand [src]="nightstandUrl" camera-controls background-color="#333333"></model-viewer>
+    <model-viewer id="interaction" reveal="interaction" preload [src]="nightstandUrl" [poster]="nightstandPoster" alt="A 3D model of a nightstand" camera-controls background-color="#333333" camera-orbit="20deg 85deg auto" ></model-viewer> 
 </div>
 <img class="ukeImage imageFit" [src]="ukeImage" />
 <div class="ukuleleWrapper">
-    <model-viewer [src]="ukeUrl" camera-controls background-color="#333333" stage-light-intensity="0.8" ></model-viewer>
+    <model-viewer id="lazy-load " camera-controls reveal="interaction" [src]="ukeUrl" alt="A 3D model of an ukulele" background-color="#333333" stage-light-intensity="0.8" camera-orbit="20deg 95deg auto" >
+     <div id="lazy-load-poster" class="ukeModel" slot="poster"></div>
+     <div id="button-load" slot="poster" (click)="loadUke()"> {{loadingUke ? 'Loading...' : 'Load 3D Model'}}</div>
+    </model-viewer>
 </div>
+
+<button></button>

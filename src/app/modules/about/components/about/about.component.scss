@@ -7,9 +7,9 @@
 .aboutWrapper {
     background: #fff;
     margin:0 auto;
-    width:33em;
+    width:95vw;
     font-size:1.5em;
-    padding:20px;
+    padding-right:15px;
     
     a {
         text-decoration: none;
@@ -36,5 +36,12 @@
             font-size:.8em;
         }
     }
+}
 
+@media(min-width:1024px) {
+    .aboutWrapper {
+        width:33em;
+        padding:20px;
+
+    }
 }

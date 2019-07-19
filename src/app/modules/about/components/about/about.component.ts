@@ -10,5 +10,4 @@ import * as uvExample from '../../../../../assets/images/uvExample.jpg';
 
 export class AboutComponent {
   uvExampleSrc:string = uvExample;
-
 }

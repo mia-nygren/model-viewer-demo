@@ -3,10 +3,13 @@
     <!-- <h2 class="title is-3">Language and tools</h2> -->
     <p>This demo makes use of the <a href="https://github.com/GoogleWebComponents/model-viewer"> &lt;model-viewer&gt;</a> web component from Google. 
      Angular, TypeScript, and Webpack was used when developing and building this demo.</p>
-    <h2 class="title is-4">Interactivity</h2>
+    
+     <h2 class="title is-4">Interactivity</h2>
     <p> The <a href="https://github.com/GoogleWebComponents/model-viewer"> &lt;model-viewer&gt;</a> component is used to view and interact with the models. You can rotate a 3D-model 
-    by dragging with your mouse (desktop) or finger (mobile). </p>
-    <h2 class="title is-3">3D-Models and images</h2>
+    by dragging with your mouse (desktop) or finger (mobile). </p>  
+    
+    
+    <h2 class="title is-3">3D-models and images</h2>
     <p> The 3D-models were created in <a href="https://www.blender.org/download/" >blender 2.8 release candidate</a>    and the still images were rendered in blender cycles render engine. 
      The models were UV-unwrapped and textured, and after packing the UVs the materials were baked to three separate images: 
      Diffuse, Normal Map, and Metallic/Roughness combined. Metallic is the blue channel and roughness the green channel. </p>
@@ -22,8 +25,7 @@
     was used to export the 3D models to the glTF format.  </p>
     <hr/>
     <p> This has been my first attempt to export and create 3D-models for the web, hence I discovered that more optimization is needed.
-    Even though the models are lazy-loded, they need to be reduced further in file-size. Unfortunately model-viewer does not 
-    support draco-compression at the moment, which could have reduced the file size of the glTF models by around X%. </p>
-
+    They sofa model and the ukulele model needs to be reduced further in file-size by making them more low poly. Unfortunately model-viewer does not 
+    support draco-compression at the moment, which could have reduced the file size of the glTF models by around 45%. </p>
    
 </div>

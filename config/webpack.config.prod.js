@@ -2,12 +2,11 @@
 
 const webpackMerge = require('webpack-merge');
 const ngw = require('@ngtools/webpack');
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin    = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
-const CopyPlugin           = require('copy-webpack-plugin');
+const CopyWebpackPlugin           = require('copy-webpack-plugin');
 
 const commonConfig = require('./webpack.config.common');
 
@@ -74,10 +73,10 @@ module.exports = webpackMerge(commonConfig, {
             template: 'src/index.html',
             baseUrl: 'https://mia-nygren.github.io/model-viewer-demo/',
         }),
-        new CopyPlugin([
+        new CopyWebpackPlugin([
             {
-              from: 'node_modules/@webcomponents/webcomponentsjs/**/*js',
-              to: 'polyfill/webcomponents/',
+              from: 'src/assets',
+              to: 'src/assets',
             },
           ]),
     ]

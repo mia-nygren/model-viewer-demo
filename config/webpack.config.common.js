@@ -53,7 +53,14 @@ module.exports = {
                     { loader: 'sass-loader', options: { sourceMap: isDev } }
                 ],
                 include: helpers.root('src', 'app')
-            }
+            },
+            {
+			    test: /\.svg/,
+			    use: {
+			        loader: 'svg-url-loader',
+			        options: {}
+			    }
+			}
         ]
     },
 

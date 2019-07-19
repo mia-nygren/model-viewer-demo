@@ -9,6 +9,7 @@ import { NavigationComponent } from './shared/components/navigation/navigation.c
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import '@google/model-viewer';
 
+import '../assets/styles/reset';
 import '../assets/styles/styles';
 
 @NgModule({

@@ -1,5 +1,5 @@
 # 3D model-viewer Demo
-This is a simple demo that makes use of Angular, TypeScript, and &lt;model-viewer&gt; (a google web component). 
+This demo app is deployed at https://mia-nygren.github.io/model-viewer-demo/
 
 ## Development  
 This project used [angular-sass-webpack boilerplate](https://github.com/thamsrang/angular7-sass-webpack4) as a starting point. 

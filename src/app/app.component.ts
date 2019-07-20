@@ -9,5 +9,4 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
     name = '3D model-viewer Demo';
-    // models = modelsArr
 }

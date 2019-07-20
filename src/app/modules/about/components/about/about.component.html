@@ -11,8 +11,8 @@
     
     <h2 class="title is-3">3D-models and images</h2>
     <p> The 3D-models were created in <a href="https://www.blender.org/download/" >blender 2.8 release candidate</a>    and the still images were rendered in blender cycles render engine. 
-     The models were UV-unwrapped and textured, and after packing the UVs the materials were baked to three separate images: 
-     Diffuse, Normal Map, and Metallic/Roughness combined. Metallic is the blue channel and roughness the green channel. </p>
+     The models were also UV-unwrapped and textured in blender. After packing the UVs, the materials were baked to three separate images: 
+     Diffuse, Normal Map, and Metallic/Roughness combined. (Metallic is the blue channel and roughness is the green channel). </p>
      <img [src]="uvExampleSrc" alt="Example of baked UV images" />
      <div class="description">
       <span>Diffuse</span>
@@ -26,6 +26,6 @@
     <hr/>
     <p> This has been my first attempt to export and create 3D-models for the web, and in the process, I discovered that far more optimization is needed.
     The sofa and the ukulele models need to be reduced further in file-size by making them more low poly. Unfortunately, model-viewer does not 
-    support draco-compression yet, which could have reduced the file size of the glTF models by around 45 percent. </p>
+    support draco-compression yet, which could have reduced the file size of the glTF models by ≈ 45 percent. </p>
    
 </div>

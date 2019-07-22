@@ -78,6 +78,10 @@ module.exports = webpackMerge(commonConfig, {
               from: 'src/assets',
               to: 'src/assets',
             },
+            {
+              from: 'src/favicon',
+              to: 'src/favicon',
+            },
           ]),
     ]
 });
